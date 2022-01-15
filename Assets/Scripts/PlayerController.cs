@@ -199,19 +199,21 @@ public class PlayerController : MonoBehaviour
                 CannonUpgrade cannonUpgrade = target.GetComponent<CannonUpgrade>();
                 if (cannonUpgrade.GetUpgradeMaterial())
                 {
+                    audioSource.PlayOneShot(buildSuccessSoundEffect);
                     StartCoroutine(TriggerBlockingAnimation("building"));
                     StartCoroutine(ReleaseResource());
                     StartCoroutine(DestroyResource(target, "cannon"));
                 }
             }
 
-            if (target.CompareTag(v2CannonTag) && IsCarryingMine("blue") && !isTriggeringAnimation)
+            if (target.CompareTag(v2CannonTag) && IsCarryingMine("green") && !isTriggeringAnimation)
             {
                 Debug.Log($"[PlayerController.TakeAction] interacing with v2 cannon: {target.name}");
 
                 CannonUpgrade cannonUpgrade = target.GetComponent<CannonUpgrade>();
                 if (cannonUpgrade.GetUpgradeMaterial())
                 {
+                    audioSource.PlayOneShot(buildSuccessSoundEffect);
                     StartCoroutine(TriggerBlockingAnimation("building"));
                     StartCoroutine(ReleaseResource());
                     StartCoroutine(DestroyResource(target, "cannon"));
