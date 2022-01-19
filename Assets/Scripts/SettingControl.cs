@@ -10,8 +10,8 @@ public class SettingControl : MonoBehaviour
     public int players = 2;
     public int player1 = 0;
     public int player2 = 1;
-    public int player3 = 1;
-    public int player4 = 1;
+    public int player3 = 2;
+    public int player4 = 3;
 
 
 
