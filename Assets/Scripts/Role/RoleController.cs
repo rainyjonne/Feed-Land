@@ -11,6 +11,7 @@ public class RoleController : MonoBehaviour
     public int currentHealth;
 
     public HealthBar healthBar;
+    public Text bloodSituation;
 
     public enum Direction
     {
@@ -67,6 +68,7 @@ public class RoleController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         canMove = true;
         currentHealth = maxHealth;
+        bloodSituation.text = currentHealth.ToString();
         healthBar.SetMaxHealth(maxHealth);
 
         animator = GetComponent<Animator>();
@@ -149,6 +151,14 @@ public class RoleController : MonoBehaviour
     {
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
+        bloodSituation.text = currentHealth.ToString();
+    }
+
+    public void AddBlood(int blood)
+    {
+        currentHealth += blood;
+        healthBar.SetHealth(currentHealth);
+        bloodSituation.text = currentHealth.ToString();
     }
 
     public void AppendPath(Vector3 newPath)

@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     public const string treeTagSuffix = "_tree";
     public const string mineTagSuffix = "_mine";
     public const string foodTagSuffix = "_food";
+    public const string bonusTagSuffix = "_bonus";
 
     // carriable object prefabs
     public GameObject redFoodPrefab;
@@ -31,6 +32,7 @@ public class PlayerController : MonoBehaviour
     // Sound Effects
     public AudioClip cuttingSoundEffect;
     public AudioClip miningSoundEffect;
+    public AudioClip openingSurpriseSoundEffect;
     public AudioClip buildSuccessSoundEffect;
     public AudioClip loadBulletSoundEffect;
 
@@ -253,6 +255,23 @@ public class PlayerController : MonoBehaviour
 
                 shouldResetCooldown = true;
             }
+
+            if (target.tag.EndsWith(bonusTagSuffix) && notInCooldown && carryingObject == null && !isTriggeringAnimation)
+            {
+                Debug.Log($"[PlayerController.TakeAction] interacting with bonus: {target.name}");
+
+                audioSource.PlayOneShot(openingSurpriseSoundEffect);
+                isTriggeringAnimation = true;
+                StartCoroutine(TriggerBlockingAnimation("surprise_opening"));
+
+                ResourceController resourceController = target.GetComponent<ResourceController>();
+                if (resourceController.GetHit(1))
+                {
+                    StartCoroutine(DestroyResource(target, "bonus", target.tag.Split('_')[0]));
+                }
+
+                shouldResetCooldown = true;
+            }
         }
 
         return shouldResetCooldown;
@@ -281,6 +300,9 @@ public class PlayerController : MonoBehaviour
         else if (resourceType == "cannon")
         {
             o.GetComponent<CannonUpgrade>().UpgradeCannon();
+        }
+        else if (resourceType == "bonus") {
+            o.GetComponent<BonusPlace>().ConstructSurprise(color);
         }
 
         if (carryingObject != null)

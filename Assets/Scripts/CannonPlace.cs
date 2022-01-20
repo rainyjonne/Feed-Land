@@ -51,7 +51,14 @@ public class CannonPlace : MonoBehaviour
         {
             GameObject mine = Instantiate(minePrefab, gameObject.transform);
             mine.transform.localPosition = offsetY * i + baseY;
-            mine.transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
+            // modify scale based on different mines
+            if (minePrefab.tag.Contains("red")) {
+                mine.transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
+            } else if (minePrefab.tag.Contains("blue")) {
+                mine.transform.localScale = new Vector3(1.3f, 1.3f, 1.3f);
+            } else {
+                mine.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
+            }
             Material mat = mine.GetComponent<MeshRenderer>().materials[0];
             Color newColor = new Color(mat.color.r, mat.color.g, mat.color.b, 0.5f);
             mat.color = newColor;

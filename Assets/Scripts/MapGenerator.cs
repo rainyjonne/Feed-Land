@@ -17,6 +17,7 @@ public class MapGenerator : MonoBehaviour
     public GameObject unicorn;
     public GameObject[] treePrefab;
     public GameObject[] minePrefab;
+    public GameObject[] bonusPrefab;
     public GameObject snowEffect;
 
     public int[] elementNum;
@@ -129,6 +130,11 @@ public class MapGenerator : MonoBehaviour
 
                     prefab.Add(minePrefab[j]);
                     total.Add(elementNum[j]);
+
+                    
+                    prefab.Add(bonusPrefab[j]);
+                    total.Add(elementNum[j]);
+
                     break;
                 case mapType.Santa:
                 case mapType.Winter:
@@ -137,6 +143,7 @@ public class MapGenerator : MonoBehaviour
 
                     prefab.Add(minePrefab[j]);
                     total.Add(elementNum[j]);
+
                     break;
             }
 
@@ -455,10 +462,20 @@ public class MapGenerator : MonoBehaviour
                 }
             }
 
+        
             bool isSpecialPrefabOverlay = false;
             if (currentMapType != mapType.Origin && specialPrefabPathPositions.Contains(tp.Item1)) isSpecialPrefabOverlay = true;
             // if (!isPathOverlay && !cannonPlacePositions.Contains(tp.Item1)) Debug.Log($"position: {tp.Item1}");
-            if (!isPathOverlay && !cannonPlacePositions.Contains(tp.Item1) && !isSpecialPrefabOverlay) Instantiate(tp.Item2, tp.Item1, Quaternion.identity);
+            if (!isPathOverlay && !cannonPlacePositions.Contains(tp.Item1) && !isSpecialPrefabOverlay){
+                // change the rotation of the bonus gift
+                if (tp.Item2.tag.Contains("blue_bonus") || tp.Item2.tag.Contains("green_bonus") ) {
+                    Quaternion rotation = Quaternion.Euler(270, 0, 0);
+                    Instantiate(tp.Item2, tp.Item1, rotation);
+
+                } else {
+                    Instantiate(tp.Item2, tp.Item1, Quaternion.identity);
+                }
+            } 
         }
     }
 

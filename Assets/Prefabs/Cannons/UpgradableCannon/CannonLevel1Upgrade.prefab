@@ -1199,6 +1199,7 @@ GameObject:
   - component: {fileID: 8533739143291163977}
   - component: {fileID: 1909701027415349444}
   - component: {fileID: 883187998534229604}
+  - component: {fileID: 6561932643714724988}
   m_Layer: 11
   m_Name: CannonLevel1Upgrade
   m_TagString: v1_cannon
@@ -1330,8 +1331,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradeCannonPrefab: {fileID: 3164562526322126175, guid: 221709d07e3014a53b3cedb3b37a32f5,
     type: 3}
-  demandUpgradeMaterials: 4
+  demandUpgradeMaterials: 1
   progressBar: {fileID: 8533739145176091764}
+--- !u!114 &6561932643714724988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9080489585567837883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d24af782778e41aa83e64f2629643c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cannonPrefab: {fileID: 3164562526322126175, guid: 221709d07e3014a53b3cedb3b37a32f5,
+    type: 3}
+  minePrefab: {fileID: 3723393909993456683, guid: 2a341d22fa965432587d19b13049b322,
+    type: 3}
+  demandMines: 1
 --- !u!1 &9080489585692364015
 GameObject:
   m_ObjectHideFlags: 0

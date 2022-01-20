@@ -7,6 +7,7 @@ public class UITimer : MonoBehaviour
     //string timerText;
     public Text timerText;
     public Text timerEndingText;
+ 
 
 
     public GameObject badgeCanvas;

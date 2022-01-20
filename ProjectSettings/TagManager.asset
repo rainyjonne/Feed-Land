@@ -24,6 +24,9 @@ TagManager:
   - v2_cannon
   - cannon
   - v3_cannon
+  - red_bonus
+  - blue_bonus
+  - green_bonus
   layers:
   - Default
   - TransparentFX
