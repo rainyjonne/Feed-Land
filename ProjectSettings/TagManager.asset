@@ -27,6 +27,7 @@ TagManager:
   - red_bonus
   - blue_bonus
   - green_bonus
+  - wrong_food
   layers:
   - Default
   - TransparentFX

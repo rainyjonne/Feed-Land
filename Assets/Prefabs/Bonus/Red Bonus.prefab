@@ -591,3 +591,5 @@ MonoBehaviour:
     type: 3}
   waterBallCanvasPrefab: {fileID: 5619890933198108243, guid: ac7464e7ed768f949910a89562557ce1,
     type: 3}
+  greenPotionPrefab: {fileID: 7279096063291149164, guid: 6baf358cd557fd84492fc9badbeef1c6,
+    type: 3}

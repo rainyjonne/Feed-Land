@@ -307,7 +307,7 @@ MonoBehaviour:
   resetBoundaryY: -20
   redFoodPrefab: {fileID: 5452013488800006156, guid: 5dfbbd9a8a33f4a49b8b6cb7afe07715,
     type: 3}
-  greenFoodPrefab: {fileID: 6341855032448282133, guid: aa641b177f4e4804e9795fe29830b2fb,
+  greenFoodPrefab: {fileID: 568797456357868956, guid: bcfb0388f78d1e64da9605257817fd25,
     type: 3}
   blueFoodPrefab: {fileID: 6220021002384598952, guid: a74b3b3e1d120487397b6eaa51be7e15,
     type: 3}
@@ -319,6 +319,8 @@ MonoBehaviour:
     type: 3}
   cuttingSoundEffect: {fileID: 8300000, guid: 391967e27d4f0b746b7b4edb68ad4f3e, type: 3}
   miningSoundEffect: {fileID: 8300000, guid: 570148ed2be31cb43b462913a2b4b2f8, type: 3}
+  openingSurpriseSoundEffect: {fileID: 8300000, guid: 83e82f1959c9f294ebb9dd51699a7ba3,
+    type: 3}
   buildSuccessSoundEffect: {fileID: 8300000, guid: 77088f321c72e4ea48454b0e4895890f,
     type: 3}
   loadBulletSoundEffect: {fileID: 8300000, guid: 99722d72fc24749eaa111dac86eda199,

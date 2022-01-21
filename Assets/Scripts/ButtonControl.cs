@@ -11,6 +11,7 @@ public class ButtonControl : MonoBehaviour
     public AudioSource backgroundMusic;
     public GameObject exitCanvas;
     public GameObject settingCanvas;
+    public GameObject ruleCanvas;
     public GameObject resumeButton;
     public GameObject pauseButton;
     public Text volumeText;
@@ -43,6 +44,11 @@ public class ButtonControl : MonoBehaviour
     public void ModifySetting()
     {
         settingCanvas.SetActive(true);
+    }
+
+    public void SeeRules()
+    {
+        ruleCanvas.SetActive(true);
     }
 
     public void ModifyLevel()
@@ -121,6 +127,7 @@ public class ButtonControl : MonoBehaviour
     {
         exitCanvas.SetActive(false);
         settingCanvas.SetActive(false);
+        ruleCanvas.SetActive(false);
     }
 
     public void PrepareToExit()

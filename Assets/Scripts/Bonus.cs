@@ -7,7 +7,10 @@ public class Bonus : MonoBehaviour
     public AudioClip positiveBonus;
     public AudioClip negativeBonus;
     public GameObject waterBallPrefab;
+    public GameObject watermelonPrefab;
+    public GameObject bananaPrefab;
     private GameObject[] blueMonsters;
+    private GameObject[] greenMonsters;
     private AudioSource audioPlayer;
     private GameObject unicorn;
 
@@ -26,17 +29,15 @@ public class Bonus : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        int add = 2;
+        add = Random.Range(0, 2);
         if (gameObject.tag.Contains("red")) {
             int blood;
             blood = Random.Range(1, 6);
-            int add = 2;
-            add = Random.Range(0, 2);
             if (add == 1) {
-                print("加血" + blood);
                 unicorn.GetComponent<RoleController>().AddBlood(blood);
                 audioPlayer.PlayOneShot(positiveBonus);
             } else if (add == 0) {
-                print("扣血" + blood);
                 unicorn.GetComponent<RoleController>().TakeDamage(blood);
                 audioPlayer.PlayOneShot(negativeBonus);
             }
@@ -50,6 +51,23 @@ public class Bonus : MonoBehaviour
                 GameObject waterBall;
                 waterBall = Instantiate(waterBallPrefab, waterBallPosition, Quaternion.identity);
                 Destroy(waterBall, 3.5f);
+            }
+            Destroy(gameObject, 1f);
+        } else if (gameObject.tag.Contains("green")) {
+            greenMonsters = GameObject.FindGameObjectsWithTag("green_monster");
+            foreach (GameObject greenMonster in greenMonsters) {
+                Vector3 greenFoodPosition;
+                greenFoodPosition = greenMonster.transform.Find("GreenFoodPosition").position;
+                GameObject greenFood;
+                if (add == 1) {
+                    audioPlayer.PlayOneShot(positiveBonus);
+                    greenFood = Instantiate(watermelonPrefab, greenFoodPosition, Quaternion.identity);
+                    Destroy(greenFood, 3.5f);
+                } else if (add == 0) {
+                    audioPlayer.PlayOneShot(negativeBonus);
+                    greenFood = Instantiate(bananaPrefab, greenFoodPosition, Quaternion.identity);
+                    Destroy(greenFood, 3.5f);
+                }
             }
             Destroy(gameObject, 1f);
         }

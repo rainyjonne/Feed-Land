@@ -43,6 +43,7 @@ public class MonsterControl : MonoBehaviour
     private List<string> foodList = new List<string> { "red_food", "blue_food", "green_food" };
     private AudioSource audioPlayer;
     private int nextGetMapIdx;
+    private bool sameColor = false;
 
     IEnumerator Start()
     {
@@ -230,7 +231,13 @@ public class MonsterControl : MonoBehaviour
             StartCoroutine(WaitAtttckThenMove(2));
         }
 
-        if (foodList.Contains(other.gameObject.tag))
+        if (other.gameObject.tag.Split('_')[0] == this.gameObject.tag.Split('_')[0]) {
+            sameColor = true;
+        } else {
+            sameColor = false;
+        }
+        
+        if (foodList.Contains(other.gameObject.tag) && sameColor)
         {
             animator.SetTrigger("Eat");
             GameObject eattenFood = transform.GetChild(transform.childCount - 1).gameObject;

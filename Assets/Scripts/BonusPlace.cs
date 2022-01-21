@@ -6,6 +6,7 @@ public class BonusPlace : MonoBehaviour
 {
     public GameObject needlePrefab;
     public GameObject waterBallCanvasPrefab;
+    public GameObject greenPotionPrefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +26,8 @@ public class BonusPlace : MonoBehaviour
             Instantiate(needlePrefab, gameObject.transform.position, Quaternion.identity);
         } else if (type == "blue") {
             Instantiate(waterBallCanvasPrefab, gameObject.transform.position, Quaternion.identity);
+        } else if (type == "green") {
+            Instantiate(greenPotionPrefab, gameObject.transform.position, Quaternion.identity);
         }
         
 

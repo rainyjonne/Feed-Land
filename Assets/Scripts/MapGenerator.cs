@@ -131,12 +131,20 @@ public class MapGenerator : MonoBehaviour
                     prefab.Add(minePrefab[j]);
                     total.Add(elementNum[j]);
 
-                    
-                    prefab.Add(bonusPrefab[j]);
-                    total.Add(elementNum[j]);
+                    //prefab.Add(bonusPrefab[j]);
+                    //total.Add(elementNum[j]);
 
                     break;
                 case mapType.Santa:
+                    prefab.Add(treePrefab[j]);
+                    total.Add(elementNum[j]);
+
+                    prefab.Add(minePrefab[j]);
+                    total.Add(elementNum[j]);
+
+                    prefab.Add(bonusPrefab[j]);
+                    total.Add(elementNum[j]);
+                    break;
                 case mapType.Winter:
                     prefab.Add(treePrefab[j]);
                     total.Add(elementNum[j]);
@@ -144,6 +152,8 @@ public class MapGenerator : MonoBehaviour
                     prefab.Add(minePrefab[j]);
                     total.Add(elementNum[j]);
 
+                    prefab.Add(bonusPrefab[j]);
+                    total.Add(elementNum[j]);
                     break;
             }
 

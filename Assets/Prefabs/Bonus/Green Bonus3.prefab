@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 9051522710045958039}
   - component: {fileID: 3318727228555887009}
   - component: {fileID: 1079229286164792081}
+  - component: {fileID: 2658180485084722036}
   m_Layer: 0
   m_Name: Green Bonus3
   m_TagString: green_bonus
@@ -124,3 +125,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 1
   currentHealth: 0
+--- !u!114 &2658180485084722036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9051522710047854443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 115dc8985fcc3a04faae53426f83a134, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  needlePrefab: {fileID: 7273899060248702117, guid: 76ebbb57a817c7d4c89360a6ea663066,
+    type: 3}
+  waterBallCanvasPrefab: {fileID: 5619890933198108243, guid: ac7464e7ed768f949910a89562557ce1,
+    type: 3}
+  greenPotionPrefab: {fileID: 7279096063291149164, guid: 6baf358cd557fd84492fc9badbeef1c6,
+    type: 3}

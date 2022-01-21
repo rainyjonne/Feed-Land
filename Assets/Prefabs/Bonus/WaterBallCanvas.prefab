@@ -159,6 +159,10 @@ MonoBehaviour:
   negativeBonus: {fileID: 8300000, guid: da164761973099d4880a27504e51c535, type: 3}
   waterBallPrefab: {fileID: 5122495324394048962, guid: b55a00a167eb0444fa62a8fffb8a81c9,
     type: 3}
+  watermelonPrefab: {fileID: 1866625033233474845, guid: 468e7404e5982f445ba5aeefcef538c9,
+    type: 3}
+  bananaPrefab: {fileID: 5866001532922646040, guid: 148cf61baca4abd42bbc1b50a63ff3b3,
+    type: 3}
 --- !u!1 &5620448445571602915
 GameObject:
   m_ObjectHideFlags: 0
