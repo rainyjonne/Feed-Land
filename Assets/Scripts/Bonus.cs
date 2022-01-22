@@ -33,7 +33,7 @@ public class Bonus : MonoBehaviour
         add = Random.Range(0, 2);
         if (gameObject.tag.Contains("red")) {
             int blood;
-            blood = Random.Range(1, 6);
+            blood = Random.Range(1, 11);
             if (add == 1) {
                 unicorn.GetComponent<RoleController>().AddBlood(blood);
                 audioPlayer.PlayOneShot(positiveBonus);
