@@ -47,3 +47,7 @@ Gather **tomato**, **blueberry** and **broccoli** from **trees of different colo
 1. You can unpack the **red surprise** to let the unicorn **replenish blood**. The condition of replenishing blood is different every time. It may be an empty one, that is, no blood is replenished.
 2. You can unpack the **blue surprise**, it will generate a **blue magical water ball to block** the blue little dragon for **3 seconds**. When the water ball is generated, there is a chance to bounce the little dragon off the map to reduce his ability to attack the unicorn, but also has the opportunity and possibility to bounce the little dragon onto the unicorn to cause damage
 3. You can unpack the **green surprise**, it will generate **large banana rain or large watermelon rain**, it will not be affected if the green little dragon gets hit by a banana, the effect of being hit by a watermelon is equivalent to being hit by a broccoli food bullet , there is a chance to fill up the little green dragon and let it disappear
+
+## Special Notes
+1. Remember to **turn your audio on** to experience this game more! 記得**開聲音**來獲得更加的遊戲體驗
+2. Once you get any material **YOU CANNOT ABANDON IT**,  unless **YOU SUICIDE BY JUMPING OFF THE MAP**. 一旦拿到任何素材，你將**無法拋棄該素材**，除非你**跳下地圖自殺**
