@@ -130,6 +130,11 @@ public class ButtonControl : MonoBehaviour
         ruleCanvas.SetActive(false);
     }
 
+    public void ReturnToGame()
+    {
+        ruleCanvas.SetActive(false);
+    }
+
     public void PrepareToExit()
     {
         exitCanvas.SetActive(true);
