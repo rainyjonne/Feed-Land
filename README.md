@@ -2,9 +2,13 @@
 CS, NTHU. 110 CS550300 Game Programming. Final Project.
 ## License
 2022, 傅嬿羽
+
 2022, 趙祥臻
+
 2022, 陳劭愷
+
 2022, 王領崧
+
 2022, 施品成
 
 ## Background Story
