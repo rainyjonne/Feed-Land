@@ -453,11 +453,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81764ca0d6d6b6d4e9800ce9fc78bb73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 30
+  maxHealth: 120
   roleMovingSpeed: 1
   roleRotSpeed: 0.1
   currentHealth: 5
   healthBar: {fileID: 782867172595525757}
+  bloodSituation: {fileID: 0}
   enemies:
   - {fileID: 7796034374063013152, guid: bea0a48fb05ec31459d3c9234c8b20a8, type: 3}
   - {fileID: 2263965975130722102, guid: abe7c16478c1ea44abbcb937d74ba588, type: 3}

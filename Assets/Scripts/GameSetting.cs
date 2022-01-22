@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameSetting : MonoBehaviour
 {
     public AudioSource backgroundMusic;
     public GameObject unicorn;
     public GameObject playersManagerObject;
+    public Text bloodSituation;
     private GameObject settingGameObject;
     private SettingControl initialSettings;
     private PlayersManager playerGenerateScript;
@@ -28,15 +30,21 @@ public class GameSetting : MonoBehaviour
         level = initialSettings.level;
         if (level == 0)
         {
-            unicorn.GetComponent<RoleController>().maxHealth = 60;
+            unicorn.GetComponent<RoleController>().maxHealth = 120;
+            unicorn.GetComponent<RoleController>().currentHealth = 120;
+            bloodSituation.text = 120.ToString();
         }
         else if (level == 1)
         {
-            unicorn.GetComponent<RoleController>().maxHealth = 40;
+            unicorn.GetComponent<RoleController>().maxHealth = 80;
+            unicorn.GetComponent<RoleController>().currentHealth = 80;
+            bloodSituation.text = 80.ToString();
         }
         else if (level == 2)
         {
-            unicorn.GetComponent<RoleController>().maxHealth = 20;
+            unicorn.GetComponent<RoleController>().maxHealth = 40;
+            unicorn.GetComponent<RoleController>().currentHealth = 40;
+            bloodSituation.text = 40.ToString();
         }
 
         // set the background music volume

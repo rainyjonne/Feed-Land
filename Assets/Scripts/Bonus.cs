@@ -38,7 +38,8 @@ public class Bonus : MonoBehaviour
                 unicorn.GetComponent<RoleController>().AddBlood(blood);
                 audioPlayer.PlayOneShot(positiveBonus);
             } else if (add == 0) {
-                unicorn.GetComponent<RoleController>().TakeDamage(blood);
+                // didn't add any blood
+                unicorn.GetComponent<RoleController>().AddBlood(0);
                 audioPlayer.PlayOneShot(negativeBonus);
             }
             Destroy(gameObject, 1f);
