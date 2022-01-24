@@ -10,6 +10,8 @@ CS, NTHU. 110 CS550300 Game Programming. Final Project.
 2022, 王領崧
 
 2022, 施品成
+## [Demo Video](https://youtu.be/15MK2KkTOoc)
+![mq2](https://user-images.githubusercontent.com/40749393/150721303-2c380ee9-8414-492a-b6bd-ac731e6d506f.jpg)
 
 ## Background Story
 ### Chinese version
