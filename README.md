@@ -17,11 +17,13 @@ CS, NTHU. 110 CS550300 Game Programming. Final Project.
 ![image](https://user-images.githubusercontent.com/40749393/151514775-b09e9827-a99d-4243-a870-14a96387eb08.png)
 
 ### Rules
-![image](https://user-images.githubusercontent.com/40749393/151515656-77998c82-b97d-4974-ad77-e0f7fee758dc.png)
+![image](https://user-images.githubusercontent.com/40749393/151515991-d6f9b528-0081-4afc-938a-2c4a93b53aad.png)
+
 
 ### Gaming Scenes
-![image](https://user-images.githubusercontent.com/40749393/151515693-ad91b2fa-8e56-4942-b17c-0ef4264627db.png)
+![image](https://user-images.githubusercontent.com/40749393/151516017-286b08a6-9c24-4823-8079-92e97488eea2.png)
 ![messageImage_1642998059147](https://user-images.githubusercontent.com/40749393/150721692-abd93428-0a13-4fa7-be0f-0ee196dad3ff.jpg)
+![image](https://user-images.githubusercontent.com/40749393/151516039-9ec121b2-7c6a-457e-97ee-fad45ed4c7c6.png)
 
 
 
